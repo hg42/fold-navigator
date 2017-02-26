@@ -1,5 +1,5 @@
 {
-  "name": "fold-navigator",
+  "name": "pattern-navigator",
   "main": "./lib/pattern-navigator.js",
   "version": "0.0.1",
   "description": "A preview of your source code through line patterns while managing code folding",
