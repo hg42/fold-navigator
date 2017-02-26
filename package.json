@@ -1,10 +1,10 @@
 {
   "name": "fold-navigator",
-  "main": "./lib/fold-navigator.js",
-  "version": "0.0.618",
-  "description": "A preview of your source code through code folding points. ",
+  "main": "./lib/pattern-navigator.js",
+  "version": "0.0.1",
+  "description": "A preview of your source code through line patterns while managing code folding",
   "keywords": [
-    "fold",
+    "pattern",
     "navigator",
     "code",
     "folding",
@@ -13,9 +13,9 @@
     "summary"
   ],
   "activationCommands": {
-    "atom-workspace": "fold-navigator:toggle"
+    "atom-workspace": "pattern-navigator:toggle"
   },
-  "repository": "https://github.com/turigeza/fold-navigator",
+  "repository": "https://github.com/hg42/pattern-navigator",
   "license": "MIT",
   "engines": {
     "atom": ">=1.7.0"
