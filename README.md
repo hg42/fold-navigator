@@ -1,25 +1,23 @@
-# Fold Navigator
-fold-navigator package for [Atom](https://atom.io/) text editor
+# Pattern Navigator
+pattern-navigator package for [Atom](https://atom.io/) text editor
 
-It helps you navigate your code folding points within Atom. It takes the lines where the folding points are and lists them with their indentation to give you an overview of your code.
+It helps you navigate your code by a pattern based list of lines and also maintaining folding points within Atom. It takes the lines matching the patterns and lists them with their indentation to give you an overview of your code.
 
 It serves a similar purpose to the minimap package but with a different approach.
 
-I was missing Netbeans code navigator so much I had to come up with something which helps me navigate through my code in Atom.
-
 ## Things it can do:
 
-### 1. List all the folding points.
-![List all the folding points.](https://raw.githubusercontent.com/turigeza/fold-navigator/master/resources/all_folding_points.png)
+### 1. List all matching lines keeping their indentation.
+![List all matching lines with indentation.](https://raw.githubusercontent.com/hg42/pattern-navigator/master/resources/all_matching_lines.png)
 
-### 2. Search your folding points.
-![A screenshot of your package](https://raw.githubusercontent.com/turigeza/fold-navigator/master/resources/fold_search.png)
+### 2. Search the panel.
+![Search the panel](https://raw.githubusercontent.com/hg42/pattern-navigator/master/resources/fold_search.png)
 
 ### 3. You can limit the depth it will parse and list.
 You could use this if you only wanted to see let's say a list of methods in a class. In which case you might not care what is at indentation level 5.
 This is a screen shot where max indentation is set to 1. This (and all settings btw) can be grammar specific.
 
-![A screenshot of your package](https://raw.githubusercontent.com/turigeza/fold-navigator/master/resources/limited_folds_search.png)
+![Limited search the panel](https://raw.githubusercontent.com/hg42/pattern-navigator/master/resources/limited_folds_search.png)
 
 ### 4. Move within folds.
 A list of commands available to you to navigate within the folds.

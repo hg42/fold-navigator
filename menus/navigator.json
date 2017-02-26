@@ -1,28 +1,28 @@
 {
     "context-menu": {
         "atom-text-editor": [{
-            "label": "Toggle Fold Navigator",
-            "command": "fold-navigator:toggle"
+            "label": "Toggle Pattern Navigator",
+            "command": "pattern-navigator:toggle"
         }],
-        ".fold-navigator": [{
+        ".pattern-navigator": [{
             "label": "Close panel",
-            "command": "fold-navigator:close"
+            "command": "pattern-navigator:close"
         }]
     },
     "menu": [{
         "label": "Packages",
         "submenu": [{
-            "label": "Fold Navigator",
+            "label": "Pattern Navigator",
             "submenu": [{
                 "label": "Toggle",
-                "command": "fold-navigator:toggle"
+                "command": "pattern-navigator:toggle"
             }]
         }]
     }, {
         "label": "View",
         "submenu": [{
-            "label": "Toggle Fold Navigator",
-            "command": "fold-navigator:toggle"
+            "label": "Toggle Pattern Navigator",
+            "command": "pattern-navigator:toggle"
         }]
     }]
 }
