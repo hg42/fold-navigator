@@ -1,6 +1,6 @@
 'use babel';
 
-import NavigatorView from '../lib/navigator-view';
+import NavigatorView from '../lib/pattern-navigator-view';
 
 describe('NavigatorView', () => {
   it('has one valid test', () => {

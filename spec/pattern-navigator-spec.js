@@ -1,6 +1,6 @@
 'use babel';
 
-import Navigator from '../lib/navigator';
+import Navigator from '../lib/pattern-navigator';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -15,29 +15,29 @@ describe('Navigator', () => {
     activationPromise = atom.packages.activatePackage('navigator');
   });
 
-  describe('when the navigator:toggle event is triggered', () => {
+  describe('when the pattern-navigator:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.navigator')).not.toExist();
+      expect(workspaceElement.querySelector('.pattern-navigator')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'navigator:toggle');
+      atom.commands.dispatch(workspaceElement, 'pattern-navigator:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.navigator')).toExist();
+        expect(workspaceElement.querySelector('.pattern-navigator')).toExist();
 
-        let navigatorElement = workspaceElement.querySelector('.navigator');
+        let navigatorElement = workspaceElement.querySelector('.pattern-navigator');
         expect(navigatorElement).toExist();
 
         let navigatorPanel = atom.workspace.panelForItem(navigatorElement);
         expect(navigatorPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'navigator:toggle');
+        atom.commands.dispatch(workspaceElement, 'pattern-navigator:toggle');
         expect(navigatorPanel.isVisible()).toBe(false);
       });
     });
@@ -51,11 +51,11 @@ describe('Navigator', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.navigator')).not.toExist();
+      expect(workspaceElement.querySelector('.pattern-navigator')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'navigator:toggle');
+      atom.commands.dispatch(workspaceElement, 'pattern-navigator:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,9 +63,9 @@ describe('Navigator', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let navigatorElement = workspaceElement.querySelector('.navigator');
+        let navigatorElement = workspaceElement.querySelector('.pattern-navigator');
         expect(navigatorElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'navigator:toggle');
+        atom.commands.dispatch(workspaceElement, 'pattern-navigator:toggle');
         expect(navigatorElement).not.toBeVisible();
       });
     });
