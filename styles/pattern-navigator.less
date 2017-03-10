@@ -12,7 +12,7 @@
 
 .pattern-navigator-item {
   cursor: default;
-  padding: 0px;
+  padding: 0px 0px 0px 4px;
   margin: 0px;
   overflow: auto;
   color: #ff0000;
@@ -84,13 +84,17 @@
 }
 
 .pattern-navigator-gutter {
-  padding-left: 2px;
-  margin-right: 5px;
+  padding-left: 5px;
+  margin-right: 4px;
   height:auto;
   background-color: @inset-panel-background-color;
 }
 
-.pattern-navigator-item-selected .pattern-navigator-gutter{
+.pattern-navigator-gutter:empty {
+  display: none;
+}
+
+.pattern-navigator-item-selected .pattern-navigator-gutter {
   background-color: @background-color-error;
 }
 
@@ -100,17 +104,17 @@
 }
 
 /* search modal */
-.pattern-navigator-search-modal input{
+.pattern-navigator-search-modal input {
   width : 100%;
   background-color: @app-background-color;
   border: 0px solid @app-background-color;
   color: @text-color;
 }
 
-.pattern-navigator-search-modal-item-selected{
+.pattern-navigator-search-modal-item-selected {
   background-color: @background-color-selected;
   color:@text-color-selected;
 }
-.pattern-navigator-search-modal-item{
+.pattern-navigator-search-modal-item {
   cursor: pointer;
 }
